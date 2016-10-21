@@ -63,6 +63,57 @@ public class Terminal extends JFrame implements Runnable {
             this.repaint();
         }
 
+        hackingText.append("\nUDP port 314 found open");
+        testArea.setText(hackingText.toString());
+        try {
+            Thread.sleep(1000);
+        }
+        catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        hackingText.append("\nBreaching port using inversion decupling");
+        testArea.setText(hackingText.toString());
+        for (int i = 0; i < 5; i++) {
+            try {
+                Thread.sleep(1000);
+            }
+            catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            hackingText.append(".");
+            testArea.setText(hackingText.toString());
+            this.repaint();
+        }
+        hackingText.append("\nBreach complete");
+
+        try {
+            Thread.sleep(1000);
+        }
+        catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(250);
+            }
+            catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            hackingText.append("\n#");
+            testArea.setText(hackingText.toString());
+            this.repaint();
+        }
+
+        hackingText
+                .append("\nFBI Internal Network. Unauthorized access constitutes treason\n"
+                        + "and is punishable by death");
+        testArea.setText(hackingText.toString());
+
     }
 
 }

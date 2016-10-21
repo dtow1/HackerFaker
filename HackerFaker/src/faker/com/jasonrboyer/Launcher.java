@@ -16,8 +16,7 @@ public class Launcher extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                // Launcher launch = new Launcher();
-                // launch.setVisible(true);
+
                 FakeIt frame = new FakeIt();
 
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -25,6 +24,12 @@ public class Launcher extends JFrame {
 
                 Thread t = new Thread(frame);
                 t.start();
+
+                Terminal term = new Terminal();
+                term.setVisible(true);
+
+                Thread t2 = new Thread(term);
+                t2.start();
 
             }
         });
