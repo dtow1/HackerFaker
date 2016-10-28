@@ -37,6 +37,8 @@ public class Terminal extends JFrame implements Runnable {
         new BorderLayout();
         JPanel testPanel = new JPanel(new BorderLayout());
         JTextArea testArea = new JTextArea("Welcome to the Jungle");
+        // JScrollPane scrollPane = new JScrollPane(testArea);
+        // new SmartScroller(scrollPane);
         setSize(400, 400);
         testPanel.add(testArea, BorderLayout.CENTER);
         add(testPanel);
@@ -47,8 +49,10 @@ public class Terminal extends JFrame implements Runnable {
         this.setVisible(true);
         hackingText.append("Starting Hack...");
         testArea.setText(hackingText.toString());
+        testArea.setCaretPosition(testArea.getDocument().getLength());
         hackingText.append("\nScanning 85.118.32.9");
         testArea.setText(hackingText.toString());
+        testArea.setCaretPosition(testArea.getDocument().getLength());
         this.repaint();
         for (int i = 0; i < 5; i++) {
             try {
@@ -60,11 +64,13 @@ public class Terminal extends JFrame implements Runnable {
             }
             hackingText.append(".");
             testArea.setText(hackingText.toString());
+            testArea.setCaretPosition(testArea.getDocument().getLength());
             this.repaint();
         }
 
         hackingText.append("\nUDP port 314 found open");
         testArea.setText(hackingText.toString());
+        testArea.setCaretPosition(testArea.getDocument().getLength());
         try {
             Thread.sleep(1000);
         }
@@ -74,6 +80,7 @@ public class Terminal extends JFrame implements Runnable {
         }
         hackingText.append("\nBreaching port using inversion decupling");
         testArea.setText(hackingText.toString());
+        testArea.setCaretPosition(testArea.getDocument().getLength());
         for (int i = 0; i < 5; i++) {
             try {
                 Thread.sleep(1000);
@@ -84,9 +91,11 @@ public class Terminal extends JFrame implements Runnable {
             }
             hackingText.append(".");
             testArea.setText(hackingText.toString());
+            testArea.setCaretPosition(testArea.getDocument().getLength());
             this.repaint();
         }
         hackingText.append("\nBreach complete");
+        testArea.setCaretPosition(testArea.getDocument().getLength());
 
         try {
             Thread.sleep(1000);
@@ -96,7 +105,7 @@ public class Terminal extends JFrame implements Runnable {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             try {
                 Thread.sleep(250);
             }
@@ -106,6 +115,7 @@ public class Terminal extends JFrame implements Runnable {
             }
             hackingText.append("\n#");
             testArea.setText(hackingText.toString());
+            testArea.setCaretPosition(testArea.getDocument().getLength());
             this.repaint();
         }
 
@@ -113,6 +123,7 @@ public class Terminal extends JFrame implements Runnable {
                 .append("\nFBI Internal Network. Unauthorized access constitutes treason\n"
                         + "and is punishable by death");
         testArea.setText(hackingText.toString());
+        testArea.setCaretPosition(testArea.getDocument().getLength());
 
     }
 
